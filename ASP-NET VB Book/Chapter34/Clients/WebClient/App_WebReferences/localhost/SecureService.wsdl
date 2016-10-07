@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TestAuthenticated">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestAuthenticatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestAuthenticatedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestAuthenticatedSoapIn">
+    <wsdl:part name="parameters" element="tns:TestAuthenticated" />
+  </wsdl:message>
+  <wsdl:message name="TestAuthenticatedSoapOut">
+    <wsdl:part name="parameters" element="tns:TestAuthenticatedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SecureServiceSoap">
+    <wsdl:operation name="TestAuthenticated">
+      <wsdl:input message="tns:TestAuthenticatedSoapIn" />
+      <wsdl:output message="tns:TestAuthenticatedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecureServiceSoap" type="tns:SecureServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestAuthenticated">
+      <soap:operation soapAction="http://tempuri.org/TestAuthenticated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SecureServiceSoap12" type="tns:SecureServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestAuthenticated">
+      <soap12:operation soapAction="http://tempuri.org/TestAuthenticated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecureService">
+    <wsdl:port name="SecureServiceSoap" binding="tns:SecureServiceSoap">
+      <soap:address location="http://localhost:2017/WebServices3/SecureService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SecureServiceSoap12" binding="tns:SecureServiceSoap12">
+      <soap12:address location="http://localhost:2017/WebServices3/SecureService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

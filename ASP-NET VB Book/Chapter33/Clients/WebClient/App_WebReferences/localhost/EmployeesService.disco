@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/webservices2/employeesservice.asmx?wsdl" docRef="http://localhost/webservices2/employeesservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/webservices2/employeesservice.asmx" xmlns:q1="http://www.apress.com/ProASP.NET/Compat" binding="q1:EmployeesServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/webservices2/employeesservice.asmx" xmlns:q2="http://www.apress.com/ProASP.NET/Compat" binding="q2:EmployeesServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

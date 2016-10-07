@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\RolesDemo\", "..\RolesDemo\", "{9D0E81D0-D794-46E1-9619-9D267C70A57E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/RolesDemo"
+		Debug.AspNetCompiler.PhysicalPath = "..\RolesDemo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\RolesDemo\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/RolesDemo"
+		Release.AspNetCompiler.PhysicalPath = "..\RolesDemo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\RolesDemo\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6281"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\WinRoles\", "..\WinRoles\", "{4DB0F692-93EB-48B4-B5CF-A33D498C853F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/WinRoles"
+		Debug.AspNetCompiler.PhysicalPath = "..\WinRoles\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WinRoles\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WinRoles"
+		Release.AspNetCompiler.PhysicalPath = "..\WinRoles\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WinRoles\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6283"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D0E81D0-D794-46E1-9619-9D267C70A57E}.Debug|.NET.ActiveCfg = Debug|.NET
+		{9D0E81D0-D794-46E1-9619-9D267C70A57E}.Debug|.NET.Build.0 = Debug|.NET
+		{4DB0F692-93EB-48B4-B5CF-A33D498C853F}.Debug|.NET.ActiveCfg = Debug|.NET
+		{4DB0F692-93EB-48B4-B5CF-A33D498C853F}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

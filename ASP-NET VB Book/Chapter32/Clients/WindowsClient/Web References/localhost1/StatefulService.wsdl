@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="StoreName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreNameResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetName">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="StoreNameSoapIn">
+    <wsdl:part name="parameters" element="tns:StoreName" />
+  </wsdl:message>
+  <wsdl:message name="StoreNameSoapOut">
+    <wsdl:part name="parameters" element="tns:StoreNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetName" />
+  </wsdl:message>
+  <wsdl:message name="GetNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StatefulServiceSoap">
+    <wsdl:operation name="StoreName">
+      <wsdl:input message="tns:StoreNameSoapIn" />
+      <wsdl:output message="tns:StoreNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <wsdl:input message="tns:GetNameSoapIn" />
+      <wsdl:output message="tns:GetNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StatefulServiceSoap" type="tns:StatefulServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StoreName">
+      <soap:operation soapAction="http://tempuri.org/StoreName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <soap:operation soapAction="http://tempuri.org/GetName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StatefulServiceSoap12" type="tns:StatefulServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StoreName">
+      <soap12:operation soapAction="http://tempuri.org/StoreName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <soap12:operation soapAction="http://tempuri.org/GetName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StatefulService">
+    <wsdl:port name="StatefulServiceSoap" binding="tns:StatefulServiceSoap">
+      <soap:address location="http://localhost:1775/WebServices1/StatefulService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StatefulServiceSoap12" binding="tns:StatefulServiceSoap12">
+      <soap12:address location="http://localhost:1775/WebServices1/StatefulService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

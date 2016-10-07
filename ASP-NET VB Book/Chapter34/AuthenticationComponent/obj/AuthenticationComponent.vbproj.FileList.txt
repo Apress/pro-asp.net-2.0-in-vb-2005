@@ -1,0 +1,5 @@
+bin\Debug\AuthenticationComponent.dll
+bin\Debug\AuthenticationComponent.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AuthenticationComponent.dll
+obj\Debug\AuthenticationComponent.pdb

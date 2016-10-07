@@ -1,0 +1,5 @@
+bin\Debug\SherlockLib.dll
+bin\Debug\SherlockLib.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SherlockLib.dll
+obj\Debug\SherlockLib.pdb

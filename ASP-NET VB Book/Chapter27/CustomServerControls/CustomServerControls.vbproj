@@ -1,0 +1,66 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50215</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5DE19E6-4251-486A-A70E-CCFF91FF2870}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>CustomServerControls</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorTypeEditor.vb" />
+    <Compile Include="ColorTypeEditorControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomTextBox.vb" />
+    <Compile Include="SuperSimpleRepeaterDesigner.vb" />
+    <Compile Include="TitledTextBoxActionList.vb" />
+    <Compile Include="TitledTextBoxDesigner.vb" />
+    <Compile Include="CustomImageButton.vb" />
+    <Compile Include="LinkControl.vb" />
+    <Compile Include="LinkWebControl.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="RestrictedCalendar.vb" />
+    <Compile Include="RichLabel.vb" />
+    <Compile Include="SimpleStyledRepeater.vb" />
+    <Compile Include="SuperSimpleRepeater.vb" />
+    <Compile Include="SuperSimpleRepeater2.vb" />
+    <Compile Include="TitledTextBox.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="button1.jpg" />
+    <EmbeddedResource Include="ColorTypeEditorControl.resx">
+      <DependentUpon>ColorTypeEditorControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+</Project>

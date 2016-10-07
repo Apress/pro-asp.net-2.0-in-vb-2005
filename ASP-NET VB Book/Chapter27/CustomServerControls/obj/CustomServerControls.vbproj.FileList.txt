@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\button1.jpg
+obj\Debug\CustomServerControlsLibrary.ColorTypeEditorControl.resources
+obj\Debug\CustomServerControls.vbproj.GenerateResource.Cache
+obj\Debug\CustomServerControls.dll
+obj\Debug\CustomServerControls.pdb
+bin\Debug\CustomServerControls.dll
+bin\Debug\CustomServerControls.pdb

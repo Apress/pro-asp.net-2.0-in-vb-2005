@@ -1,0 +1,5 @@
+bin\Debug\FileDataComponent.dll
+bin\Debug\FileDataComponent.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FileDataComponent.dll
+obj\Debug\FileDataComponent.pdb

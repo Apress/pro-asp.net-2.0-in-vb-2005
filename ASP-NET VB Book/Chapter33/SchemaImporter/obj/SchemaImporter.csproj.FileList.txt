@@ -1,0 +1,5 @@
+bin\Debug\SchemaImporter.dll
+bin\Debug\SchemaImporter.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SchemaImporter.dll
+obj\Debug\SchemaImporter.pdb

@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\ConsoleClient.exe
+bin\Debug\ConsoleClient.pdb
+bin\Debug\\FileDataComponent.dll
+bin\Debug\\FileDataComponent.pdb
+obj\Debug\ConsoleClient.exe
+obj\Debug\ConsoleClient.pdb
+bin\Debug\ConsoleClient.exe.config

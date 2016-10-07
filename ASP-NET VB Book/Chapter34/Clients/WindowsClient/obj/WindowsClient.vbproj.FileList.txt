@@ -1,0 +1,9 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WindowsClient.AsyncTest.resources
+obj\Debug\Resources.resources
+obj\Debug\WindowsClient.vbproj.GenerateResource.Cache
+bin\Debug\WindowsClient.exe.config
+bin\Debug\WindowsClient.exe
+bin\Debug\WindowsClient.pdb
+obj\Debug\WindowsClient.exe
+obj\Debug\WindowsClient.pdb

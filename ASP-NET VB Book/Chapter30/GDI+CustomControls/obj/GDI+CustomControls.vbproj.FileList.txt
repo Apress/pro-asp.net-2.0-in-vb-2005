@@ -1,0 +1,5 @@
+bin\Debug\GDI+CustomControls.dll
+bin\Debug\GDI+CustomControls.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\GDI+CustomControls.dll
+obj\Debug\GDI+CustomControls.pdb

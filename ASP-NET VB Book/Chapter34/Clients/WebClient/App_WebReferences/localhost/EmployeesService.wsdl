@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.apress.com/ProASP.NET/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.apress.com/ProASP.NET/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Northwind Employees</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.apress.com/ProASP.NET/">
+      <s:element name="GetEmployeesLogged">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeesLoggedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesLoggedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeesSlow">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeesSlowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesSlowResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeesWseSecured">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeesWseSecuredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesWseSecuredResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEmployeesLoggedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeesLogged" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesLoggedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesLoggedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSlowSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeesSlow" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSlowSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesSlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesWseSecuredSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeesWseSecured" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesWseSecuredSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesWseSecuredResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Employees_x0020_ServiceSoap">
+    <wsdl:operation name="GetEmployeesLogged">
+      <wsdl:input message="tns:GetEmployeesLoggedSoapIn" />
+      <wsdl:output message="tns:GetEmployeesLoggedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesSlow">
+      <wsdl:input message="tns:GetEmployeesSlowSoapIn" />
+      <wsdl:output message="tns:GetEmployeesSlowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesWseSecured">
+      <wsdl:input message="tns:GetEmployeesWseSecuredSoapIn" />
+      <wsdl:output message="tns:GetEmployeesWseSecuredSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Employees_x0020_ServiceSoap" type="tns:Employees_x0020_ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployeesLogged">
+      <soap:operation soapAction="http://www.apress.com/ProASP.NET/GetEmployeesLogged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesSlow">
+      <soap:operation soapAction="http://www.apress.com/ProASP.NET/GetEmployeesSlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesWseSecured">
+      <soap:operation soapAction="http://www.apress.com/ProASP.NET/GetEmployeesWseSecured" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Employees_x0020_ServiceSoap12" type="tns:Employees_x0020_ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployeesLogged">
+      <soap12:operation soapAction="http://www.apress.com/ProASP.NET/GetEmployeesLogged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesSlow">
+      <soap12:operation soapAction="http://www.apress.com/ProASP.NET/GetEmployeesSlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesWseSecured">
+      <soap12:operation soapAction="http://www.apress.com/ProASP.NET/GetEmployeesWseSecured" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Employees_x0020_Service">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Northwind Employees</wsdl:documentation>
+    <wsdl:port name="Employees_x0020_ServiceSoap" binding="tns:Employees_x0020_ServiceSoap">
+      <soap:address location="http://localhost:2017/WebServices3/EmployeesService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Employees_x0020_ServiceSoap12" binding="tns:Employees_x0020_ServiceSoap12">
+      <soap12:address location="http://localhost:2017/WebServices3/EmployeesService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

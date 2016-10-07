@@ -1,0 +1,5 @@
+bin\Debug\EncryptionUtility.dll
+bin\Debug\EncryptionUtility.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\EncryptionUtility.dll
+obj\Debug\EncryptionUtility.pdb
